@@ -1,0 +1,6 @@
+interface:
+  display_name: "Docs Site Crawler / 文档站爬取"
+  short_description: "Crawl docs sites into Markdown and Mermaid bundles / 爬取文档站并导出 Markdown 与 Mermaid"
+  default_prompt: "Use $crawl-docs-to-markdown to crawl a documentation site and export index.md, summary.md, Markdown pages, and Mermaid diagrams. 使用 $crawl-docs-to-markdown 爬取文档网站并导出 index.md、summary.md、页面 Markdown 和 Mermaid 图。"
+policy:
+  allow_implicit_invocation: true

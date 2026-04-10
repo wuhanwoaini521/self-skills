@@ -1,0 +1,7 @@
+interface:
+  display_name: "GitHub Trending Report / GitHub 热榜报告"
+  short_description: "Scrape GitHub Trending into bilingual Markdown and Mermaid reports / 抓取 GitHub 热榜并生成中英双语 Markdown 与 Mermaid 报告"
+  default_prompt: "Use $github-trending-report to scrape GitHub Trending daily, weekly, and monthly repositories, then generate a bilingual Markdown report with repo summaries and Mermaid workflow diagrams. 使用 $github-trending-report 抓取 GitHub 日榜、周榜、月榜，并生成包含项目摘要与 Mermaid 工作流示意的中英双语报告。"
+policy:
+  allow_implicit_invocation: true
+
