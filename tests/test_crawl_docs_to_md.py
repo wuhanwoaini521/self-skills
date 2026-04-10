@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-from scripts.crawl_docs_to_md import (
+from tools.crawl_docs_to_md import (
     article_to_markdown,
     canonicalize_url,
     extract_headings,

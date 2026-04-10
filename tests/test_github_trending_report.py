@@ -1,6 +1,6 @@
 import unittest
 
-from github_trending_report.generate_report import (
+from tools.github_trending_report import (
     RepoSummary,
     build_mermaid,
     extract_readme_headings,

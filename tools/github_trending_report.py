@@ -541,7 +541,11 @@ def run(report_date: str, output_dir: Path, max_items: int, detail_limit: int) -
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Scrape GitHub Trending and render a bilingual markdown report.")
     parser.add_argument("--date", default=str(date.today()), help="Report date in YYYY-MM-DD format.")
-    parser.add_argument("--output-dir", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path(__file__).resolve().parent.parent / "archive" / "generated" / "github-trending-report",
+    )
     parser.add_argument("--max-items", type=int, default=10, help="Visible repos to keep per period.")
     parser.add_argument("--detail-limit", type=int, default=5, help="Detailed repo notes per period.")
     return parser.parse_args()

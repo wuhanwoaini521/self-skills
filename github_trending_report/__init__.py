@@ -1,2 +1,0 @@
-"""GitHub trending report generator."""
-

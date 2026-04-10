@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skill Starter / 技能模板"
+  short_description: "Minimal starter template for a new skill / 新 skill 的最小起步模板"
+  default_prompt: "Use $skill-starter as a base template for creating a new skill. 使用 $skill-starter 作为创建新 skill 的基础模板。"
+policy:
+  allow_implicit_invocation: true
+

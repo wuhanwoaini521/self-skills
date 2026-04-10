@@ -14,7 +14,7 @@ ALLOWED_FRONTMATTER_KEYS = {"name", "description", "license", "allowed-tools", "
 
 
 def skills_root() -> Path:
-    return Path(__file__).resolve().parent.parent
+    return Path(__file__).resolve().parent.parent / "skills"
 
 
 def find_skill_dirs(root: Path) -> list[Path]:

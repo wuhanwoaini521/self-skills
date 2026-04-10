@@ -699,14 +699,14 @@ def parse_args() -> argparse.Namespace:
         epilog=textwrap.dedent(
             """\
             Example:
-              python scripts/crawl_docs_to_md.py ^
+              python tools/crawl_docs_to_md.py ^
                 https://alibaba.github.io/page-agent/docs/introduction/overview/ ^
-                --output-dir output/page-agent
+                --output-dir archive/generated/page-agent
             """
         ),
     )
     parser.add_argument("start_url", help="Documentation page URL used as the crawl entry point.")
-    parser.add_argument("--output-dir", default="output/docs-export", help="Output directory for markdown files.")
+    parser.add_argument("--output-dir", default="archive/generated/docs-export", help="Output directory for markdown files.")
     parser.add_argument("--browser", help="Optional browser path used for JS-rendered sites.")
     parser.add_argument("--timeout", type=int, default=30, help="HTTP and browser timeout in seconds.")
     parser.add_argument("--max-pages", type=int, default=200, help="Maximum number of pages to crawl.")
