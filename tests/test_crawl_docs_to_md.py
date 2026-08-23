@@ -143,8 +143,8 @@ class CrawlDocsToMdTests(unittest.TestCase):
         summary = render_summary(sections, "https://alibaba.github.io/page-agent/docs/")
         self.assertIn("[概览](introduction/overview.md)", summary)
         self.assertEqual(
-            str(make_page_relative_path("https://alibaba.github.io/page-agent/docs/introduction/overview", "https://alibaba.github.io/page-agent/docs/")),
-            "introduction\\overview.md",
+            make_page_relative_path("https://alibaba.github.io/page-agent/docs/introduction/overview", "https://alibaba.github.io/page-agent/docs/").as_posix(),
+            "introduction/overview.md",
         )
 
     def test_helpers(self) -> None:
@@ -156,8 +156,8 @@ class CrawlDocsToMdTests(unittest.TestCase):
         self.assertEqual([item.text for item in visible_outline(headings, "标题")], ["小节"])
         self.assertEqual(infer_project_name("https://alibaba.github.io/page-agent/docs/introduction/overview/"), "page-agent")
         self.assertEqual(
-            str(resolve_output_dir(Path("output"), "page-agent")),
-            "output\\page-agent",
+            resolve_output_dir(Path("output"), "page-agent").as_posix(),
+            "output/page-agent",
         )
 
 

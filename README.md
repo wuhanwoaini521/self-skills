@@ -11,12 +11,13 @@
 - `tools/`：辅助脚本，例如校验与本地生成
 - `archive/`：历史产物与生成结果
 
-常用命令：
+常用命令（推荐用 [uv](https://docs.astral.sh/uv/) 管理依赖）：
 
 ```powershell
-python -m pytest
-python tools\validate_skills.py
-python skills\github-trending-report\scripts\generate_report.py --date 2026-04-10
+uv sync                # 安装依赖（含 pytest / bs4 / requests / pyyaml）
+uv run pytest
+uv run python tools\validate_skills.py
+uv run python skills\github-trending-report\scripts\generate_report.py --date 2026-04-10
 ```
 
 建议先从 [docs/index.md](docs/index.md) 开始；如果你是来直接找可用 skill，先看 [skills-index.md](skills-index.md)。

@@ -1,0 +1,20 @@
+[project]
+name = "self-skills"
+version = "0.1.0"
+description = "Skill 创建学习笔记与可复用 skill 集合 🧰"
+requires-python = ">=3.10"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "beautifulsoup4>=4.12",
+    "requests>=2.28",
+    "pyyaml>=6.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
