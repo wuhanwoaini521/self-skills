@@ -33,6 +33,7 @@ TOOL_FILES = (
     "sync_skills.py",
     "list_skills.py",
     "doctor.py",
+    "remove_skill.py",
 )
 
 

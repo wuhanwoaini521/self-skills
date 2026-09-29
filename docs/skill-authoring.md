@@ -236,3 +236,26 @@ policy:
    ```
 
 `tools/sync_skills.py` 会在仓库根维护 `.sync-state.json`，记录每个 skill 同步到了哪些目标、当时的版本与指纹，用于后续增量更新与 `--prune` 清理。
+
+## 移除一个 Skill
+
+默认操作**可恢复**：目录移到 `archive/<name>/`，registry 条目标记为 `archived`，
+`skills-index.md` 重新生成。`archive/` 不参与活动校验，`archived` 也不默认同步。
+
+```bash
+# 先看计划，不写任何文件
+uv run python tools/remove_skill.py my-skill --dry-run
+
+# 归档（可恢复）
+uv run python tools/remove_skill.py my-skill
+
+# 永久删除：删目录 + 删 registry 条目，不可逆
+uv run python tools/remove_skill.py my-skill --delete
+```
+
+安全约束：
+
+- skill 必须在 registry 里注册，且目录必须真实存在；两者不一致时直接报错，不猜测。
+- registry 记录的 `path` 必须与 `skills/<name>/` 的实际位置一致。
+- `archive/<name>` 已存在时拒绝执行，**不会覆盖**；需要先自行处理旧归档。
+- `--delete` 必须显式指定，没有任何隐式永久删除路径。

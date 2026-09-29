@@ -102,6 +102,7 @@ self-skills/
 | 工具 | 一句话职责 |
 | --- | --- |
 | `tools/registry.py` | Skill 登记的数据层：定义 `SkillEntry` 字段与 `parse_registry` / `load_registry` 解析校验，以及 `discover_skill_dirs` 扫描磁盘上的 Skill 目录。 |
+| `tools/remove_skill.py` | 移除 skill：默认归档到 `archive/` 并标记 `archived`（可恢复），`--delete` 才永久删除。 |
 | `tools/console.py` | 共享输出层：集中定义 ✓ ✗ ○ ! 符号与颜色处理，负责 Windows 控制台 UTF-8 重配置。 |
 | `tools/sync_targets.py` | 同步目标定义层：定义 `SyncTarget` 数据结构与全局 `TARGETS` 表，并提供 `resolve_target`、`load_config`。 |
 | `tools/new_skill.py` | 从 `templates/skill-starter/` 创建新 Skill 目录，并自动在 `registry/skills.yaml` 中追加登记条目。 |
