@@ -15,6 +15,7 @@ uv run python tools/list_skills.py --write-index
 | --- | --- | --- | --- | --- |
 | `crawl-docs-to-markdown` | 1.0.0 | stable | `codex` | Crawl documentation sites and export a project-named Markdown bundle with navigation and Mermaid diagrams. |
 | `github-trending-report` | 1.0.0 | stable | `codex` | Scrape GitHub Trending and generate a bilingual Markdown report with summaries and Mermaid diagrams. |
+| `project-delivery` | 0.1.0 | experimental | `codex` | Orchestrate end-to-end engineering delivery from a short user request - classify the task, analyze requirements, plan, implement, run functional tests, run conditional UI review, run an independent code review, fix findings, regress, accept, and write auditable execution logs under .ai-runs/. Use when the user asks to implement a feature, fix a bug, modify or build project behavior, refactor code, redesign or improve a page or UI, upgrade dependencies, or otherwise deliver an engineering task in a repository, even without an explicit workflow prompt. Do not use for read-only questions such as explaining code or interpreting an error message. |
 
 ### crawl-docs-to-markdown
 
@@ -34,6 +35,15 @@ uv run python tools/list_skills.py --write-index
 - 说明：Scrape GitHub Trending and generate a bilingual Markdown report with summaries and Mermaid diagrams.
 - 本地校验：`uv run python tools/validate_skills.py github-trending-report`
 - 同步：`uv run python tools/sync_skills.py --target codex --skill github-trending-report`
+
+### project-delivery
+
+- 目录：`skills/project-delivery`
+- 版本：`0.1.0`　状态：`experimental`
+- 同步目标：codex
+- 说明：Orchestrate end-to-end engineering delivery from a short user request - classify the task, analyze requirements, plan, implement, run functional tests, run conditional UI review, run an independent code review, fix findings, regress, accept, and write auditable execution logs under .ai-runs/. Use when the user asks to implement a feature, fix a bug, modify or build project behavior, refactor code, redesign or improve a page or UI, upgrade dependencies, or otherwise deliver an engineering task in a repository, even without an explicit workflow prompt. Do not use for read-only questions such as explaining code or interpreting an error message.
+- 本地校验：`uv run python tools/validate_skills.py project-delivery`
+- 同步：`uv run python tools/sync_skills.py --target codex --skill project-delivery`
 
 ## Workflow
 

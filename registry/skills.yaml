@@ -31,3 +31,18 @@ skills:
     targets:
       - codex
     description: Scrape GitHub Trending and generate a bilingual Markdown report with summaries and Mermaid diagrams.
+  - name: project-delivery
+    path: skills/project-delivery
+    version: 0.1.0
+    status: experimental
+    targets:
+    - codex
+    description: Orchestrate end-to-end engineering delivery from a short user request
+      - classify the task, analyze requirements, plan, implement, run functional tests,
+      run conditional UI review, run an independent code review, fix findings, regress,
+      accept, and write auditable execution logs under .ai-runs/. Use when the user
+      asks to implement a feature, fix a bug, modify or build project behavior, refactor
+      code, redesign or improve a page or UI, upgrade dependencies, or otherwise deliver
+      an engineering task in a repository, even without an explicit workflow prompt.
+      Do not use for read-only questions such as explaining code or interpreting an
+      error message.

@@ -75,7 +75,7 @@ def render_template(template_dir: Path, name: str, description: str) -> list[tup
     return files
 
 
-def check_name(name: str, entries: list[SkillEntry]) -> None:
+def check_name(name: str, entries: list[SkillEntry], skills_root: Path = SKILLS_ROOT) -> None:
     if not NAME_PATTERN.fullmatch(name):
         raise CreateError(
             f"invalid skill name: {name!r}\n"
@@ -83,8 +83,8 @@ def check_name(name: str, entries: list[SkillEntry]) -> None:
         )
     if len(name) > MAX_NAME_LENGTH:
         raise CreateError(f"invalid skill name: too long: {len(name)} > {MAX_NAME_LENGTH}")
-    if (SKILLS_ROOT / name).exists():
-        raise CreateError(f"skill directory already exists: {SKILLS_ROOT / name}")
+    if (skills_root / name).exists():
+        raise CreateError(f"skill directory already exists: {skills_root / name}")
     if any(entry.name == name for entry in entries):
         raise CreateError(f"skill already registered in registry: {name}")
 
@@ -188,7 +188,7 @@ def create_skill(
         entries = load_registry(registry_path)
     except RegistryError as exc:
         raise CreateError(str(exc)) from exc
-    check_name(name, entries)
+    check_name(name, entries, skills_root)
 
     rendered = render_template(template_dir, name, entry.description)
     directories = sorted({path.parent for path, _ in rendered} | {skill_dir / "references", skill_dir / "scripts"})

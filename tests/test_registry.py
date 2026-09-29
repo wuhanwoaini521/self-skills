@@ -155,4 +155,8 @@ def test_discover_skill_dirs_ignores_directories_without_skill_md(tmp_path):
 def test_committed_registry_loads():
     entries = load_registry()
 
-    assert {entry.name for entry in entries} == {"crawl-docs-to-markdown", "github-trending-report"}
+    assert {entry.name for entry in entries} == {
+        "crawl-docs-to-markdown",
+        "github-trending-report",
+        "project-delivery",
+    }

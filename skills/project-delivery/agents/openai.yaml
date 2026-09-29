@@ -1,0 +1,6 @@
+interface:
+  display_name: "Project Delivery"
+  short_description: "End-to-end engineering delivery with testing, reviews, regression, acceptance, and audit logs."
+  default_prompt: "Use $project-delivery to deliver this task end to end - classify it, plan, implement, test, review independently, fix, regress, accept, and record the run under .ai-runs/. 使用 $project-delivery 端到端完成这个工程任务：分类、计划、实现、测试、独立 review、修复、回归、验收，并写入 .ai-runs/ 执行记录。"
+policy:
+  allow_implicit_invocation: true
