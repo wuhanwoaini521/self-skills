@@ -1,15 +1,18 @@
 import unittest
 
-from tools.github_trending_report import (
-    RepoSummary,
-    build_mermaid,
-    extract_readme_headings,
-    extract_readme_intro,
-    find_workflow_hints,
-    parse_trending_page,
-    render_report,
-)
 from bs4 import BeautifulSoup
+
+from conftest import load_skill_module
+
+generate_report = load_skill_module("skills/github-trending-report/scripts/generate_report.py", "generate_report")
+
+RepoSummary = generate_report.RepoSummary
+build_mermaid = generate_report.build_mermaid
+extract_readme_headings = generate_report.extract_readme_headings
+extract_readme_intro = generate_report.extract_readme_intro
+find_workflow_hints = generate_report.find_workflow_hints
+parse_trending_page = generate_report.parse_trending_page
+render_report = generate_report.render_report
 
 
 class GitHubTrendingReportTests(unittest.TestCase):

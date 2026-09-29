@@ -1,21 +1,30 @@
 ---
-name: skill-starter
-description: Minimal starter skill template for learning and cloning into a new example. 用于学习和复制的新 skill 最小模板。
+name: {{name}}
+description: {{description}}
 ---
 
-# Skill Starter
+# {{title}}
 
 ## Overview
 
-Describe:
-
-- 这个 skill 做什么
-- 什么时候用
-- 主要输入输出是什么
+这个 skill 解决什么问题、什么时候使用、输入和输出分别是什么。
 
 ## Workflow
 
-1. 说明执行步骤
-2. 给出最小命令示例
-3. 写清楚验证方式
+1. 第一步。
+2. 第二步。
 
+最小可运行示例：
+
+```text
+uv run python scripts/<script>.py
+```
+
+## Rules
+
+- 只写这个 skill 必须遵守的约束。
+- 不写与 skill 无关的通用编程建议。
+
+## References
+
+- `references/<topic>.md`：被引用时必须真实存在，`validate_skills.py` 会检查。

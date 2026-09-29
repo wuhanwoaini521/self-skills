@@ -15,3 +15,6 @@ venv/
 # 打包与生成产物（由 skills/*/scripts/package_skill.py 重新生成）
 dist/
 archive/generated/
+
+# 本地同步状态（记录哪些 skill 被部署到了哪个 Agent，仅本机使用）
+.sync-state.json

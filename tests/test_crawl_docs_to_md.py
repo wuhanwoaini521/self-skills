@@ -1,23 +1,28 @@
 import unittest
 from pathlib import Path
+
 from bs4 import BeautifulSoup
 
-from tools.crawl_docs_to_md import (
-    article_to_markdown,
-    canonicalize_url,
-    extract_headings,
-    extract_nav_sections,
-    infer_docs_root,
-    infer_project_name,
-    mermaid_node_id,
-    make_page_relative_path,
-    normalize_heading_text,
-    render_summary,
-    resolve_output_dir,
-    render_nav_mermaid,
-    trim_duplicate_title_heading,
-    visible_outline,
+from conftest import load_skill_module
+
+crawl_docs_to_md = load_skill_module(
+    "skills/crawl-docs-to-markdown/scripts/crawl_docs_to_md.py", "crawl_docs_to_md"
 )
+
+article_to_markdown = crawl_docs_to_md.article_to_markdown
+canonicalize_url = crawl_docs_to_md.canonicalize_url
+extract_headings = crawl_docs_to_md.extract_headings
+extract_nav_sections = crawl_docs_to_md.extract_nav_sections
+infer_docs_root = crawl_docs_to_md.infer_docs_root
+infer_project_name = crawl_docs_to_md.infer_project_name
+mermaid_node_id = crawl_docs_to_md.mermaid_node_id
+make_page_relative_path = crawl_docs_to_md.make_page_relative_path
+normalize_heading_text = crawl_docs_to_md.normalize_heading_text
+render_summary = crawl_docs_to_md.render_summary
+resolve_output_dir = crawl_docs_to_md.resolve_output_dir
+render_nav_mermaid = crawl_docs_to_md.render_nav_mermaid
+trim_duplicate_title_heading = crawl_docs_to_md.trim_duplicate_title_heading
+visible_outline = crawl_docs_to_md.visible_outline
 
 
 class CrawlDocsToMdTests(unittest.TestCase):

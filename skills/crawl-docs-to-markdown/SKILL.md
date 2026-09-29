@@ -1,6 +1,6 @@
 ---
 name: crawl-docs-to-markdown
-description: Crawl documentation websites and export a project-named Markdown bundle with index.md, summary.md, per-page Markdown files, internal link preservation, and Mermaid diagrams for navigation and page outlines. Use when Codex needs to mirror docs sites, scrape developer documentation, convert online docs to Markdown, preserve sidebar or table-of-contents hierarchy, or package a docs site for local reading and reuse. µ±ÓÃ»§ÒªÇóÅÀÈ¡ÎÄµµÍøÕ¾¡¢×¥È¡¿ª·¢ÕßÎÄµµ¡¢µ¼³ö Markdown¡¢±£Áô²à±ßÀ¸Ä¿Â¼²ã¼¶¡¢±£ÁôÒ³Ãæ´ó¸Ù¡¢Éú³É Mermaid µ¼º½Í¼£¬»ò°ÑÔÚÏßÎÄµµÕ¾´ò°üÎª±¾µØ¿É¶ÁÎÄµµÊ±Ê¹ÓÃ¡£
+description: Crawl documentation websites and export a project-named Markdown bundle with index.md, summary.md, per-page Markdown files, internal link preservation, and Mermaid diagrams for navigation and page outlines. Use when Codex needs to mirror docs sites, scrape developer documentation, convert online docs to Markdown, preserve sidebar or table-of-contents hierarchy, or package a docs site for local reading and reuse. å½“ç”¨æˆ·è¦æ±‚çˆ¬å–æ–‡æ¡£ç½‘ç«™ã€æŠ“å–å¼€å‘è€…æ–‡æ¡£ã€å¯¼å‡º Markdownã€ä¿ç•™ä¾§è¾¹æ ç›®å½•å±‚çº§ã€ä¿ç•™é¡µé¢å¤§çº²ã€ç”Ÿæˆ Mermaid å¯¼èˆªå›¾ï¼Œæˆ–æŠŠåœ¨çº¿æ–‡æ¡£ç«™æ‰“åŒ…ä¸ºæœ¬åœ°å¯è¯»æ–‡æ¡£æ—¶ä½¿ç”¨ã€‚
 ---
 
 # Crawl Docs To Markdown

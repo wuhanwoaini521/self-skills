@@ -1,8 +1,9 @@
 [project]
 name = "self-skills"
 version = "0.1.0"
-description = "Skill 创建学习笔记与可复用 skill 集合 🧰"
+description = "Personal Skills Registry — 个人 Skill 的唯一事实源（创建 / 校验 / 测试 / 索引 / 同步）"
 requires-python = ">=3.10"
+readme = "README.md"
 
 [dependency-groups]
 dev = [

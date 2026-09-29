@@ -1,6 +1,6 @@
 interface:
-  display_name: "Docs Site Crawler / ÎÄµµÕ¾ÅÀÈ¡"
-  short_description: "Crawl docs sites into Markdown and Mermaid bundles / ÅÀÈ¡ÎÄµµÕ¾²¢µ¼³ö Markdown Óë Mermaid"
-  default_prompt: "Use $crawl-docs-to-markdown to crawl a documentation site and export index.md, summary.md, Markdown pages, and Mermaid diagrams. Ê¹ÓÃ $crawl-docs-to-markdown ÅÀÈ¡ÎÄµµÍøÕ¾²¢µ¼³ö index.md¡¢summary.md¡¢Ò³Ãæ Markdown ºÍ Mermaid Í¼¡£"
+  display_name: "Docs Site Crawler / æ–‡æ¡£ç«™çˆ¬å–"
+  short_description: "Crawl docs sites into Markdown and Mermaid bundles / çˆ¬å–æ–‡æ¡£ç«™å¹¶å¯¼å‡º Markdown ä¸ Mermaid"
+  default_prompt: "Use $crawl-docs-to-markdown to crawl a documentation site and export index.md, summary.md, Markdown pages, and Mermaid diagrams. ä½¿ç”¨ $crawl-docs-to-markdown çˆ¬å–æ–‡æ¡£ç½‘ç«™å¹¶å¯¼å‡º index.mdã€summary.mdã€é¡µé¢ Markdown å’Œ Mermaid å›¾ã€‚"
 policy:
   allow_implicit_invocation: true

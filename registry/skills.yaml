@@ -1,0 +1,33 @@
+# Personal Skills Registry —— 机器事实源 (source of truth)
+#
+# 人类可读视图由 tools/list_skills.py 生成到 skills-index.md，不要手改那个文件。
+# 新增 skill 推荐用: uv run python tools/new_skill.py <name>
+#
+# 字段说明:
+#   name        小写 kebab-case，必须与目录名和 SKILL.md frontmatter 一致
+#   path        相对仓库根目录的路径
+#   version     MAJOR.MINOR.PATCH
+#   status      experimental | beta | stable | deprecated | archived
+#   targets     要同步到的 Agent（见 tools/sync_targets.py）
+#   description 一句话说明这个 skill 做什么
+#   notes       可选，补充说明
+
+version: 1
+
+skills:
+  - name: crawl-docs-to-markdown
+    path: skills/crawl-docs-to-markdown
+    version: 1.0.0
+    status: stable
+    targets:
+      - codex
+    description: Crawl documentation sites and export a project-named Markdown bundle with navigation and Mermaid diagrams.
+    notes: 需要本机有 Edge 或 Chrome 才能处理 JS 渲染站点。
+
+  - name: github-trending-report
+    path: skills/github-trending-report
+    version: 1.0.0
+    status: stable
+    targets:
+      - codex
+    description: Scrape GitHub Trending and generate a bilingual Markdown report with summaries and Mermaid diagrams.
