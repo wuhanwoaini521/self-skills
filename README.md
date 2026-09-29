@@ -37,6 +37,9 @@ uv run python tools/validate_skills.py
 # 创建一个新 skill（自动注册，默认 status=experimental, version=0.1.0）
 uv run python tools/new_skill.py my-skill
 
+# 移除一个 skill（默认归档到 archive/，可恢复；--delete 才永久删除）
+uv run python tools/remove_skill.py my-skill
+
 # 同步到 Codex
 uv run python tools/sync_skills.py --target codex
 
@@ -100,3 +103,18 @@ Codex / Claude Code / OpenCode / Pi 的全局 skills 目录只是副本。**永�
 ## 依赖
 
 Python 标准库 + `PyYAML` + `pytest`，没有引入 CLI 框架。依赖用 [uv](https://docs.astral.sh/uv/) 管理。
+
+### uv index 与 uv.lock
+
+`uv.lock` 固定使用官方源（`pypi.org`）。个人机器上的 uv 配置（例如用户级
+`%APPDATA%\uv\uv.toml` 里的 `[[index]] default = true`，或 `UV_DEFAULT_INDEX`）
+会让 `uv sync` 把 lock 里的源改写成你的镜像，导致 `uv.lock` 反复变 dirty。
+
+这是**开发者机器配置**，不要写进本仓库。若你的环境有个人镜像，用这条命令安装，
+它会临时覆盖 index 且不会改写 lock（已实测）：
+
+```bash
+uv sync --locked --default-index https://pypi.org/simple
+```
+
+CI 使用 `uv sync --locked`，在没有个人配置的 runner 上不受影响。

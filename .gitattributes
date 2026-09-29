@@ -1,0 +1,16 @@
+# 仓库内统一使用 LF，避免 Windows 上的 core.autocrlf 把
+# tools/ 与 registry/ 的文本改写成 CRLF 造成无意义 diff。
+#
+# 说明：仓库 index 中的文件目前已经全部是 LF，所以新增这份配置
+# 不会触发一次全仓重新规范化。
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.lock text eol=lf
+*.gitignore text eol=lf
+*.gitkeep text eol=lf
